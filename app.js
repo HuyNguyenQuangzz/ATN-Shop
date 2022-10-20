@@ -16,8 +16,8 @@ var apiRouter = require('./routes/api')
 
 var mongoose = require('mongoose')
 var url =
-    'mongodb://localhost:27017/toy'
-// 'mongodb+srv://nqhuy88vp:Jimmynguyen67@cluster0.tcit1rn.mongodb.net/toy'
+    // 'mongodb://localhost:27017/toy'
+'mongodb+srv://nqhuy88vp:Jimmynguyen67@cluster0.tcit1rn.mongodb.net/toy'
 
 mongoose.connect(url, { useNewUrlParser: true }, err => {
     if (!err) {
