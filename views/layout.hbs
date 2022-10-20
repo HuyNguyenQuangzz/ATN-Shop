@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ATN Shop</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  {{!-- icon --}}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./font/fontawesome-free-5.15.3-web/css/all.min.css">
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  {{!-- Header --}}
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+      <div class="container">
+        {{!-- Logo --}}
+        <a class="navbar-brand" href="/">
+          <img src=".\img\toyLogo-640x465.png" width="50" height="50" class="d-inline-block align-top" alt="Logo">
+        </a>
+        {{!-- Button --}}
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/toy" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Barbie Toy
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/toy">Show All</a></li>
+                <li><a class="dropdown-item" href="/toy/view">View</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/toy" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Car Toy
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/toy">Show All</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/toy" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tranformer Toy
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/toy">Show All</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/toy" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/customer/view">Toy</a></li>
+                <li><a class="dropdown-item" href="/customer">Us</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <!-- try without mr-3 -->
+              <a class="nav-link" href="/">
+                <i class="bi bi-box-arrow-left">Login</i>
+                {{!-- \Illuminate\Support\Facades\Session::has('a_username')?
+                \Illuminate\Support\Facades\Session::get('a_username') : "" --}}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="bi bi-box-arrow-left"></i>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+  </header>
+
+  {{!-- render ra body của từng webpage --}}
+  {{{body}}}
+  {{!-- Footer --}}
+  <footer>
+    <div class="footer" style="padding-top: 0px">
+      <p class="alert alert-success text-center mt-5">Coppy right by Quang Huy - 2022</p>
+      {{!-- <div class="container" style="padding-top: 0px; padding-bottom: 0px"> --}}
+        {{!-- <div class="row"> --}}
+          {{!-- <div class="text-success"> --}}
+            <div class="row py-4 d-flex align-items-center">
+              <div class="col-md-17 text-center">
+                <a href="https://www.facebook.com/zuck"><i class="fa-brands fa-facebook text-while mr-4"></i></a>
+                <a href="https://twitter.com/kremlinrussia_e"><i class="fa-brands fa-twitter text-while mr-4"></i></a>
+                <a href="https://www.instagram.com/k.mbappe/?hl=en"><i class="fa-brands fa-instagram text-while mr-4"></i></a>
+              </div>
+            </div>
+            
+          {{!-- </div> --}}
+          <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Opening hours</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px">
+              <ul>
+                <p class="mt-2" style="color:black ;">
+                  Open from 06:00 AM to 22:00 PM<br>
+                  We're open every day of the year.
+                </p>
+              </ul>
+            </div>
+            <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Address</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
+              <ul class="list-unstyled">
+                <li class="my-2"><a hred="#">2 P. Phạm Văn Bạch, Dịch Vọng, Cầu Giấy, Hà Nội , Việt Nam</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Need Help?</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 2px">
+              <ul class="list-unstyled">
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Contact Us</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Question and Answer</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Announcements</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold">Contact</h6>
+              <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 2px">
+              <ul class="list-unstyled">
+                <li class="my-2"><i class="fa-solid fa-house mr-3"></i> Hotline: 19001006</li>
+                <li class="my-2"><i class="fa-solid fa-envelope mr-3"></i> Email: ATNcompany1st@gmail.com.vn</li>
+                <li class="my-2"><i class="fa-solid fa-phone mr-3"></i> Founded: 2009,Ha Noi, Vietnam</li>
+                <li class="my-2"><i class="fa-solid fa-print mr-3"></i> President:
+                  Professor, Doctor of a Biological Sciences, Famous explorer Jimmy Nguyen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

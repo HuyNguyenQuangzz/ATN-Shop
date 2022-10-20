@@ -1,0 +1,62 @@
+<div class="container col-md-8 mt-5">
+    <form action="/customer/edit/{{customer._id}}" method="post" class="card p-3 bg-light text-center">
+        <h2 class="text text-primary">Edit Customer Information</h2>
+        <div class="form-group">
+            <label class="text-success h6">Full Name</label>
+            <input class="form-control" type="text" name="fullname" value="{{customer.fullname}}" required minlength="1"
+                maxlength="20">
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="text-success h6">Gender</label>
+            <br>
+            Male <input type="radio" name="gender" value="Male">
+            Female <input type="radio" name="gender" value="Female">
+            Other <input type="radio" name="gender" value="Other">
+
+            {{#equal customer.gender "Male"}}
+            Male <input type="radio" name="gender" value="Male" checked>
+            Female <input type="radio" name="gender" value="Female">
+            {{/equal}}
+
+            {{#equal customer.gender "Female"}}
+            Male <input type="radio" name="gender" value="Male">
+            Female <input type="radio" name="gender" value="Female" checked>
+            {{/equal}}
+
+            {{#equal customer.gender "Other"}}
+            Male <input type="radio" name="gender" value="Male">
+            Female <input type="radio" name="gender" value="Female">
+            Other <input type="radio" name="gender" value="Other" checked>
+            {{/equal}}
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="text-success h6">Date of Birth</label>
+            <input class="form-control" type="date" name="dob" value="{{dateFormat customer.dob 'YYYY-MM-DD'}}"
+                required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="text-success h6">Email</label>
+            <input class="form-control" type="email" name="email" value="{{customer.email}}" required minlength="3"
+                maxlength="20">
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="text-success h6">Address</label>
+            <input class="form-control" type="text" name="address" value="{{customer.address}}" required minlength="3"
+                maxlength="200">
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="text-success h6">Image</label><br>
+            <img src="{{customer.image}}" width="100" height="100">
+            <input class="form-control mt-3" type="text" name="image" value="{{customer.image}}" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <input class="btn btn-primary mt-3" type="submit" value="Edit">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ATN Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+     <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Karma", sans-serif
+        }
+
+        .w3-bar-block .w3-bar-item {
+            padding: 20px
+        }
+
+        .card {
+            height: 374px;
+            float: left;
+            margin: 50px 13px 20px 0px;
+        }
+
+        h5,
+        p {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        p {
+            color: red;
+        }
+
+        h5 {
+            color: royalblue;
+        }
+        footer{
+            margin-top: 180%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+           {{#each customer }}
+           
+        <div class="card" style="width: 17rem; ;">
+            <a style="height: 284px; width:400;" href="/customer/detail/{{_id}}">
+                <img src="{{image}}" class="card-img-top" alt="Toy">
+            </a>
+            <h5>{{fullname}}</h5>
+            <p>${{gender}}</p>
+            {{!-- <p>{{dateFormat dob "DD/MM/YYYY"}}</p> --}}
+            {{!-- <p>{{supplier}}</p> --}}
+            {{!-- <a href="#" class="btn btn-primary">Add to Cart</a> --}}
+            <a class="btn btn-outline-primary mt-auto" href="/">Add to cart</a>
+        </div>
+        {{/each}} 
+        </div>
+        
+    </div>
+</body>
+
+</html>

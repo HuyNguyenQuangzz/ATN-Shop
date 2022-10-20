@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col">
+        <img class="img-thumbnail" src="{{customer.image}}" width="350" height="350">
+    </div>
+    <div class="col">
+        <table class="table table-bordered text-center mt-4">
+            <tr>
+                <th colspan="2" class="text text-bg-success">Customer Detail Information</th>
+            </tr>
+            
+            <tr>
+                <th>Full Name</th>
+                <th>{{customer.fullname}}</th>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <th>{{customer.gender}}</th>
+            </tr>
+
+            <tr>
+                <th>Date of Birth</th>
+                <th>{{dateFormat customer.dob "DD/MM/YYYY"}}</th>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <th>{{customer.email}}</th>
+            </tr>
+
+            <tr>
+                <th>Address</th>
+                <th>{{customer.address}}</th>
+            </tr>
+
+        </table>
+    </div>
+</div>

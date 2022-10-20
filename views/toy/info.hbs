@@ -1,0 +1,48 @@
+<div class="row">
+   <div class="col">
+      <img class="img-thumbnail" src="{{toy.image}}" width="350" height="350">
+   </div>
+   <div class="col">
+      <table class="table table-bordered text-center mt-4">
+         <tr>
+            <th colspan="2" class="text text-bg-success">Toy Detail Information</th>
+         </tr>
+         <tr>
+            <th>Name</th>
+            <th>{{toy.name}}</th>
+         </tr>
+         <tr>
+            <th>Price</th>
+            <th>{{toy.price}}</th>
+         </tr>
+
+         <tr>
+            <th>Date of Manufacture</th>
+            <th>{{dateFormat toy.dob "DD/MM/YYYY"}}</th>
+         </tr>
+         <tr>
+            <th>Category</th>
+            <th>{{toy.category}}</th>
+         </tr>
+         <tr>
+            <th>Supplier</th>
+            <th>{{toy.supplier}}</th>
+         </tr>
+         <tr>
+            <th>Status</th>
+            <th> {{#equal toy.available true}}
+               <span style="color:fuchsia; font-weight: bold;">Available</span>
+               {{/equal}}
+               {{#equal toy.available false}}
+               <span style="color: red; font-style: italic;">Unavailable</span>
+               {{/equal}}
+            </th>
+
+         </tr>
+         <tr>
+            <th>Description</th>
+            <th>{{toy.description}}</th>
+         </tr>
+      </table>
+   </div>
+</div>
