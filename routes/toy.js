@@ -31,6 +31,14 @@ router.get('/view', (req, res) => {
     })
 })
 
+router.get('/list', (req, res)=>{
+    ToyModel.find((err, data)=>{
+        if(!err){
+            res.render('toy/list', {toy : data})
+        }
+    })
+})
+
 router.get('/delete/:id', (req, res) => {
     ToyModel.findByIdAndDelete(req.params.id, (err) => {
         if (err) {
