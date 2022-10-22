@@ -1,0 +1,126 @@
+{{!-- <div class="contrainer mt-3 text-center">
+    <div class="card-group">
+    {{#each toy}}
+    <div class="row">
+        <div class="col-4">
+            <img src="{{image}}" alt="" srcset="">
+        </div>
+    </div>
+    {{/each}}
+</div>  
+</div> --}}
+ <style>
+    .button {
+      border-radius: 23px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 15px;
+      padding: 11px;
+      width: 158px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 0p;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 1px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    h1{
+        text-align: center;
+        color: black;
+        margin-top: 2px;
+    }
+  </style>
+
+<h1>All Product about Doll Toy</h1>
+    <div class="container text-center">
+      <div class="card-group">
+        <div class="row">
+          {{#each doll}}
+          <div class="card col-md-2 m-3">
+            <a href="/doll/detail/{{_id}}">
+              <img class="card-img-top mt-4" src="{{image}}" width="200" height="200">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title text-success">{{name}}</h4>
+              <p class="card-text text-danger">${{price}}</p>
+
+            </div>
+            <a href="/doll/add"><button class="button"><span>Add to cart </span></button></a>
+
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="card-group">
+    <div class="card">
+        <img class="card-img-top" src="holder.js/100x180/" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Text</p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="holder.js/100x180/" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Text</p>
+        </div>
+    </div>
+</div> --}}

@@ -1,0 +1,56 @@
+<div class="container col-md-8 mt-5">
+   <form action="/car/add" method="post" class="card p-3 bg-light text-center">
+      <h2 class="text text-primary">Add new Toy</h2>
+
+      <div class="form-group">
+         <label class="text-success h6">Name</label>
+         <input class="form-control" type="text" name="name" required minlength="3" maxlength="50">
+      </div>
+
+      <div class="form-group">
+         <label class="text-success h6">Price</label>
+         <input class="form-control" type="number" name="price" required>
+      </div>
+
+      <div class="form-group mt-3">
+         <label class="text-success h6">Description</label>
+         <input class="form-control" type="text" name="description" required>
+      </div>
+
+      <div class="form-group mt-3">
+         <label class="text-success h6">Date of Manufacture</label>
+         <input class="form-control" type="date" name="dob" required>
+      </div>
+
+      <div class="form-group mt-3">
+         <label class="text-success h6">Size</label>
+         <input class="form-control" type="text" name="size" required>
+      </div>
+
+      <div class="form-group mt-3">
+         <label class="text-success h6">Supplier</label>
+         <input class="form-control" type="text" name="supplier" required>
+      </div>
+
+      <div class="form-group mt-3">
+         <label class="text-success h6">Status</label>
+         <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault" checked>
+         <label class="form-check-label" for="flexCheckDefault">
+            Available
+         </label>
+         <input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked">
+         <label class="form-check-label" for="flexCheckChecked">
+            Unavailable
+         </label>
+      </div>
+
+      <div class="form-group mt-3">
+         <label class="text-success h6">Image</label>
+         <input class="form-control" type="text" name="image" required>
+      </div>
+
+      <div class="form-group mt-3">
+         <input class="btn btn-primary mt-3" type="submit" value="Add">
+      </div>
+   </form>
+</div>

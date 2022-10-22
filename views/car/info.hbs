@@ -12,7 +12,7 @@
 </head>
 <style>
     label{
-        color: rgb(255, 0, 51);
+        color: red;
     }
 </style>
 
@@ -27,40 +27,40 @@
                             <div class="col-md-6">
                                 <div class="media">
                                     <label>Name:</label>
-                                    <p>{{toy.name}}</p>
+                                    <p>{{car.name}}</p>
                                 </div>
                                 <div class="media">
                                     <label>Price:</label>
-                                    <p>${{toy.price}}</p>
+                                    <p>${{car.price}}</p>
                                 </div>
                                 <div class="media">
                                     <label>Date of Manufacture</label>
-                                    <p>{{dateFormat toy.dob "DD/MM/YYYY"}}</p>
+                                    <p>{{dateFormat car.dob "DD/MM/YYYY"}}</p>
                                 </div>
                                 <div class="media">
                                     <label>Category:</label>
-                                    <p>{{toy.category}}</p>
+                                    <p>{{car.category}}</p>
                                 </div>
                                 <div class="media">
                                     <label>Supplier:</label>
-                                    <p>{{toy.supplier}}</p>
+                                    <p>{{car.supplier}}</p>
                                 </div>
                                 <div class="media">
                                     <label>Available:</label>
-                                    <p>{{toy.available}}</p>
+                                    <p>{{car.available}}</p>
                                 </div>
                                 <div class="media">
                                     <label> Description:</label>
 
                                 </div>
                             </div>
-                            <p>{{toy.description}}</p>
+                            <p>{{car.description}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-avatar">
-                        <img src="{{toy.image}}" title="" alt="">
+                        <img src="{{car.image}}" title="" alt="">
                     </div>
                 </div>
             </div>
