@@ -24,9 +24,15 @@ router.get('/', (req, res) => {
 router.get('/view', (req, res) => {
     ToyModel.find((err, data) => {
         if (!err) {
-            //res.send(data)
-            //render ra trang index ở thư mục views/student
             res.render('toy/view', { toy: data })
+        }
+    })
+})
+
+router.get('/outlook', (req, res) => {
+    ToyModel.find((err, data) => {
+        if (!err) {
+            res.render('toy/outlook', { toy: data })
         }
     })
 })

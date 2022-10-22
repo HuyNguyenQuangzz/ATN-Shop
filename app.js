@@ -7,7 +7,6 @@ var logger = require('morgan')
 var indexRouter = require('./routes/index')
 var toyRouter = require('./routes/toy')
 var customerRouter = require('./routes/customer')
-var accountRouter = require('./routes/account')
 // var accountRouter = require('./routes/login')
 var apiRouter = require('./routes/api')
 
@@ -40,51 +39,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 
-// Register
-// app.post('/register', (req, res, next) => {
-//     var usename = req.body.usename
-//     var password = req.body.password
-
-//     AccountModel.findOne({
-//         username: username
-//     })
-//         .then(data => {
-//             if (data) {
-//                 res.json('This user already exists')
-//             } else {
-//                 return AccountModel.create({
-//                     username: username,
-//                     password: password
-//                 })
-//             }
-//         })
-//         .then(data => {
-//             res.json('Create account succeed!')
-//         })
-//         .catch(err => {
-//             res.status(500).json('Create account failed!')
-//         })
-// })
-// Login
-// app.post('/login', (req, res, next)=>{
-//     var username = req.body.username
-//     var password = req.body.password
-
-//     AccountModel.findOne({
-//         username: username,
-//         password: password
-//     })
-//     .then(data =>{
-//         if(data){
-//             res.json('Login successfuly!')
-//         }else{
-//             res.status(400).json('Account incorrect or not exists!')
-//         }
-//     })
-//     .catch(err=>{
-//         res.status(500).json('Have a errror in server')
-//     })
-// })
 //Module dùng cho trao đổi dữ liệu API với front-end
 //Note: cần cài đặt package "cors" trước
 //cmd: npm install cors
@@ -101,7 +55,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/toy', toyRouter)
 app.use('/customer', customerRouter)
-app.use('/account', accountRouter)
 // app.use('/login', accountRouter)
 app.use('/api', apiRouter)
 

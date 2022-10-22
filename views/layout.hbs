@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ATN Shop</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -11,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./font/fontawesome-free-5.15.3-web/css/all.min.css">
+  {{!-- <link rel="stylesheet" href="./font/fontawesome-free-5.15.3-web/css/all.min.css"> --}}
 
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
@@ -40,9 +43,9 @@
                 Barbie Toy
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/toy">Show All</a></li>
-                <li><a class="dropdown-item" href="/toy/view">View</a></li>
-                <li><a class="dropdown-item" href="/toy/list">Something else here</a></li>
+                <li><a class="dropdown-item" href="/toy/list">Show All</a></li>
+                {{!-- <li><a class="dropdown-item" href="/toy">View</a></li> --}}
+                {{!-- <li><a class="dropdown-item" href="/toy/list">Something else here</a></li> --}}
               </ul>
             </li>
           </ul>
@@ -54,9 +57,9 @@
                 Car Toy
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/toy">Show All</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="/toy/list">Show All</a></li>
+                {{!-- <li><a class="dropdown-item" href="/toy/outlook">View</a></li> --}}
+                {{!-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
               </ul>
             </li>
           </ul>
@@ -68,9 +71,9 @@
                 Tranformer Toy
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/toy">Show All</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="/toy/list">Show All</a></li>
+                {{!-- <li><a class="dropdown-item" href="#">Another action</a></li> --}}
+                {{!-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
               </ul>
             </li>
           </ul>
@@ -89,6 +92,8 @@
             </li>
           </ul>
 
+        </div>
+        <div>
           <ul class="navbar-nav">
             <li class="nav-item">
               <!-- try without mr-3 -->
@@ -98,17 +103,18 @@
                 \Illuminate\Support\Facades\Session::get('a_username') : "" --}}
               </a>
             </li>
-            <li class="nav-item">
+            {{!-- <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="bi bi-box-arrow-left"></i>
                 Logout
               </a>
-            </li>
+            </li> --}}
           </ul>
+
         </div>
   </header>
 
-  {{!-- render ra body của từng webpage --}}
+  {{!-- render ra body cá»§a tá»«ng webpage --}}
   {{{body}}}
   {{!-- Footer --}}
   <footer>
@@ -121,11 +127,13 @@
               <div class="col-md-17 text-center">
                 <a href="https://www.facebook.com/zuck"><i class="fa-brands fa-facebook text-while mr-4"></i></a>
                 <a href="https://twitter.com/kremlinrussia_e"><i class="fa-brands fa-twitter text-while mr-4"></i></a>
-                <a href="https://www.instagram.com/k.mbappe/?hl=en"><i class="fa-brands fa-instagram text-while mr-4"></i></a>
+                <a href="https://www.instagram.com/k.mbappe/?hl=en"><i
+                    class="fa-brands fa-instagram text-while mr-4"></i></a>
               </div>
             </div>
-            
-          {{!-- </div> --}}
+
+            {{!--
+          </div> --}}
           <div class="row">
             <div class="col-md-3 mx-auto mb-4">
               <h6 class="text-uppercase font-weight-bold">Opening hours</h6>
@@ -141,17 +149,17 @@
               <h6 class="text-uppercase font-weight-bold">Address</h6>
               <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px">
               <ul class="list-unstyled">
-                <li class="my-2"><a hred="#">2 P. Phạm Văn Bạch, Dịch Vọng, Cầu Giấy, Hà Nội , Việt Nam</a></li>
+                <li class="my-2"><a hred="#">2 P. Phạm Văn Bạch, Cầu Giấy, Hà Nội, Việt Nam</a></li>
               </ul>
             </div>
             <div class="col-md-2 mx-auto mb-4">
               <h6 class="text-uppercase font-weight-bold">Need Help?</h6>
               <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 2px">
               <ul class="list-unstyled">
-                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Contact Us</a></li>
-                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Question and Answer</a></li>
-                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Announcements</a></li>
-                <li class="my-2"><a style="text-decoration: none; color: black" href="/" >Contact</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/">Contact Us</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/">Question and Answer</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/">Announcements</a></li>
+                <li class="my-2"><a style="text-decoration: none; color: black" href="/">Contact</a></li>
               </ul>
             </div>
             <div class="col-md-3 mx-auto mb-4">
