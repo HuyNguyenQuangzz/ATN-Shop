@@ -26,8 +26,6 @@ router.get('/delete/:id', (req, res) => {
             console.log(err)
         } else {
             console.log("Delete customer succeed !");
-            //var message = "Delete student succeed !";
-            //redirect về trang /student (URL không phải view)
             res.redirect("/customer");
         }
     })
@@ -51,9 +49,6 @@ router.post('/add', (req, res) => {
 router.get('/edit/:id', (req, res) => {
     CustomerModel.findById(req.params.id, (err, data) => {
         if (!err) {
-            //render ra file: update.hbs (trong thư mục views/student)
-            //gửi kèm dữ liệu của object student để load vào form edit
-            //student (tên) , data (dữ liệu)
             res.render("customer/update", { customer: data })
         }
     })

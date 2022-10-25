@@ -49,8 +49,6 @@ router.get('/delete/:id', (req, res) => {
             console.log(err)
         } else {
             console.log("Delete car Succeed !");
-            //var message = "Delete student succeed !";
-            //redirect về trang /student (URL không phải view)
             res.redirect("/car");
         }
     })
@@ -67,17 +65,6 @@ router.get('/add', (req, res) => {
 
 //nhận & xử lý dữ liệu từ form ADD
 router.post('/add', (req, res) => {
-    //Cách 1: dùng "save"
-    // var student = new StudentModel(req.body)
-    // student.save((err) => {
-    //     if (err) {
-    //         console.log(err)
-    //     } else {
-    //         console.log("Add student succeed !")
-    //         res.redirect("/student")
-    //     }
-    // })
-    //Cách 2: dùng "create"
     CarModel.create(req.body, (err) => {
         if (!err) {
             console.log('Add car succeed !')
@@ -90,9 +77,6 @@ router.post('/add', (req, res) => {
 router.get('/edit/:id', (req, res) => {
     CarModel.findById(req.params.id, (err, data) => {
         if (!err) {
-            //render ra file: update.hbs (trong thư mục views/student)
-            //gửi kèm dữ liệu của object student để load vào form edit
-            //student (tên) , data (dữ liệu)
             res.render("car/update", { car: data })
         }
     })
